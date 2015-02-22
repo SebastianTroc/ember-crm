@@ -1,5 +1,11 @@
+{{outlet}}
+
+{{#unless isEditing}}
 <article id="lead">
-  <h1>{{fullName}}</h1>
+  <h1>
+    {{fullName}}
+    {{#link-to 'lead.edit' model classNames='edit'}}Edit{{/link-to}}
+  </h1>
 
   <p>Name: {{fullName}}</p>
   <p>Email: {{email}}</p>
@@ -23,3 +29,4 @@
     <div class="saving">saving...</div>
   {{/if}}
 </article>
+{{/unless}}
