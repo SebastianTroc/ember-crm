@@ -10,4 +10,8 @@ App.Lead = DS.Model.extend({
     return this.get('firstName') + ' ' + this.get('lastName')
   }.property('firstName', 'lastName')
 
-})
+});
+
+App.Lead.reopenClass({
+  STATUSES: ['new', 'in progress', 'closed', 'bad']
+});

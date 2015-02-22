@@ -1,0 +1,25 @@
+<article id="lead">
+  <h1>{{fullName}}</h1>
+
+  <p>Name: {{fullName}}</p>
+  <p>Email: {{email}}</p>
+  <p>Phone: {{phone}}</p>
+  <p>
+    <label for="">Status:</label>
+    {{view Ember.Select content=App.Lead.STATUSES value=model.status}}
+  </p>
+  <p>
+    <label for="">Notes:</label>
+    {{view Ember.TextArea value=model.notes}}
+  </p>
+
+  <p><button class="submit" {{action "saveChanges"}}>Save Changes</button></p>
+
+  {{#if showUnsavedMessage}}
+    <div class="unsaved">unsaved changes</div>
+  {{/if}}
+
+  {{#if isSaving}}
+    <div class="saving">saving...</div>
+  {{/if}}
+</article>
