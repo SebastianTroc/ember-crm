@@ -1,5 +1,9 @@
 <article id="leads">
-  <h1>Leads</h1>
+  <h1>
+    Leads
+    <small>{{#link-to 'leads.new'}}New Lead{{/link-to}}</small>
+  </h1>
+
 
   <ul>
     {{#each lead in controller}}

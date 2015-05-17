@@ -1,0 +1,47 @@
+<article id="lead">
+  <h1>New Lead</h1>
+
+  <form>
+    <fieldset>
+      <dl>
+        <dt>
+          <label>First Name:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=fields.firstName}}
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>
+          <label>Last Name:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=fields.lastName}}
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>
+          <label>Email:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=fields.email}}
+        </dd>
+      </dl>
+
+      <dl>
+        <dt>
+          <label>Phone:</label>
+        </dt>
+        <dd>
+          {{view Ember.TextField value=fields.phone}}
+        </dd>
+      </dl>
+    </fieldset>
+
+    <fieldset class="actions">
+      <button class="submit" {{action "createLead"}}>Create Lead</button>
+    </fieldset>
+  </form>
+</article>
