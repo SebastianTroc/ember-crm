@@ -1,6 +1,12 @@
 <article id="lead">
   <h1>New Lead</h1>
 
+  {{#if showError}}
+    <div class="error">
+      Leads must have a first and last name.
+    </div>
+  {{/if}}
+
   <form>
     <fieldset>
       <dl>
