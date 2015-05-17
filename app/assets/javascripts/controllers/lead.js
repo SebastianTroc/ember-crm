@@ -12,6 +12,15 @@ App.LeadController = Ember.ObjectController.extend({
           self.transitionToRoute('lead');
         })
       }
+    },
+
+    delete: function() {
+      var self = this,
+          model = this.get('model');
+
+      model.destroyRecord().then(function() {
+        self.transitionToRoute('leads');
+      });
     }
   },
 

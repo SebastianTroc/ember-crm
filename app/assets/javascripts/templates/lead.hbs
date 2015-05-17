@@ -19,6 +19,7 @@
     {{view Ember.TextArea value=model.notes}}
   </p>
 
+  <p><a href="#" class="delete" {{action "delete"}}>Delete</a></p>
   <p><button class="submit" {{action "saveChanges"}}>Save Changes</button></p>
 
   {{#if showUnsavedMessage}}
