@@ -4,9 +4,10 @@
     <small>{{#link-to 'leads.new'}}New Lead{{/link-to}}</small>
   </h1>
 
+  {{view Ember.TextField value=searchPhrase placeholder="search" classNames="search"}}
 
   <ul>
-    {{#each lead in controller}}
+    {{#each lead in leads}}
       {{#link-to 'lead' lead tagName="li"}}
         {{lead.fullName}}
       {{/link-to}}
